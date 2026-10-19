@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "id": "com.ampliflow.mobile",
+      "url": "https://github.com/AmpliFlow/ampliflow-android",
+      "author": "AmpliFlow",
+      "name": "AmpliFlow",
+      "additionalSettings": "{\"includePrereleases\":true,\"verifyLatestTag\":false,\"apkFilterRegEx\":\"^AmpliFlow-android-v[0-9]+\\\\.[0-9]+\\\\.[0-9]+(?:-[0-9A-Za-z]+(?:[.-][0-9A-Za-z]+)*)?\\\\.apk$\"}"
+    }
+  ]
+}
