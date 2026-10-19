@@ -8,7 +8,7 @@ Install the official AmpliFlow Android APK from [Releases](https://github.com/Am
 2. Use the Add to Obtainium link below on your Android device and confirm the import.
 3. Check for updates in Obtainium, review the release notes, then install AmpliFlow. Android may ask you to allow installation from Obtainium.
 
-[Add to Obtainium](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A%2F%2Fapp%2F%257B%2522id%2522%253A%2522com.ampliflow.mobile%2522%252C%2522url%2522%253A%2522https%253A%252F%252Fgithub.com%252FAmpliFlow%252Fampliflow-android%2522%252C%2522author%2522%253A%2522AmpliFlow%2522%252C%2522name%2522%253A%2522AmpliFlow%2522%252C%2522additionalSettings%2522%253A%2522%257B%255C%2522includePrereleases%255C%2522%253Atrue%252C%255C%2522verifyLatestTag%255C%2522%253Afalse%252C%255C%2522apkFilterRegEx%255C%2522%253A%255C%2522%255EAmpliFlow-android-v%255B0-9%255D%252B%255C%255C%255C%255C.%255B0-9%255D%252B%255C%255C%255C%255C.%255B0-9%255D%252B%2528%253F%253A-%255B0-9A-Za-z%255D%252B%2528%253F%253A%255B.-%255D%255B0-9A-Za-z%255D%252B%2529%252A%2529%253F%255C%255C%255C%255C.apk%2524%255C%2522%257D%2522%257D)
+[Add to Obtainium](https://apps.obtainium.imranr.dev/redirect?r=obtainium%3A%2F%2Fapp%2F%257B%2522id%2522%253A%2522com.ampliflow.mobile%2522%252C%2522url%2522%253A%2522https%253A%252F%252Fgithub.com%252FAmpliFlow%252Fampliflow-android%2522%252C%2522author%2522%253A%2522AmpliFlow%2522%252C%2522name%2522%253A%2522AmpliFlow%2522%252C%2522additionalSettings%2522%253A%2522%257B%255C%2522includePrereleases%255C%2522%253Afalse%252C%255C%2522verifyLatestTag%255C%2522%253Afalse%252C%255C%2522apkFilterRegEx%255C%2522%253A%255C%2522%255EAmpliFlow-android-v%255B0-9%255D%252B%255C%255C%255C%255C.%255B0-9%255D%252B%255C%255C%255C%255C.%255B0-9%255D%252B%2528%253F%253A-%255B0-9A-Za-z%255D%252B%2528%253F%253A%255B.-%255D%255B0-9A-Za-z%255D%252B%2529%252A%2529%253F%255C%255C%255C%255C.apk%2524%255C%2522%257D%2522%257D)
 
 If the link does not open, download [obtainium.json](https://raw.githubusercontent.com/AmpliFlow/ampliflow-android/main/obtainium.json) and use Obtainium's Import/Export screen to import it. Alternatively, add the app manually:
 
@@ -17,11 +17,11 @@ If the link does not open, download [obtainium.json](https://raw.githubuserconte
 | App source URL | `https://github.com/AmpliFlow/ampliflow-android` |
 | App name | `AmpliFlow` |
 | Package ID | `com.ampliflow.mobile` |
-| Include prereleases | On |
+| Include prereleases | Off |
 | Verify latest tag | Off (`verifyLatestTag: false`) |
 | APK filename filter (regular expression) | `^AmpliFlow-android-v[0-9]+\.[0-9]+\.[0-9]+(?:-[0-9A-Za-z]+(?:[.-][0-9A-Za-z]+)*)?\.apk$` |
 
-This GitHub distribution repository is public: no GitHub token is needed. Prereleases must be included because `android-v0.9.1` is a prerelease. The filter selects only versioned `AmpliFlow-android-vVERSION.apk` files, excluding checksums, signatures and certificates.
+This GitHub distribution repository is public: no GitHub token is needed. `android-v0.9.1` is a regular release. Enable prereleases only if you want preview releases. The filter selects only versioned `AmpliFlow-android-vVERSION.apk` files, excluding checksums, signatures and certificates.
 
 The config uses Obtainium's JSON-encoded string for `additionalSettings`. The link imports the same app object via the supported `obtainium://app/<URL-encoded JSON>` scheme, wrapped in the official redirect for browser compatibility. See the [Obtainium deep-link documentation](https://wiki.obtainium.imranr.dev/deep_links/) and [upstream import/export implementation](https://github.com/ImranR98/Obtainium/blob/main/lib/models/app.dart).
 
