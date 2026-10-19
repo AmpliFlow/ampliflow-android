@@ -41,7 +41,7 @@ Updates must preserve the package ID and signing identity. A debug-signed build 
 
 ## Diagnostics and usage measurement
 
-Distributed APKs always send Sentry diagnostics and Rybbit usage events; there is no telemetry opt-out. Activity notifications are a separate, optional feature.
+Sentry diagnostics and Rybbit usage reporting are enabled in distributed APKs with no user opt-out. Delivery is best-effort: unsupported observation or network conditions can drop events. Activity notifications are a separate, optional feature.
 
 - **Sentry:** sanitized native Java/ANR failure locations (exception type and verified code-only frames), app release, environment, source commit, a fixed failure category and numeric HTTP status when present. Raw exception messages, account/tenant/activity IDs, credentials, request/response contents, URLs, headers/cookies, user fields, extras/contexts, breadcrumbs, locals and attachments are removed. Automatic sessions, tracing/profiling, replay, logs/metrics, screenshots and view hierarchy are disabled.
 - **Rybbit:** four fixed native actions (foreground, notification enabled, notification opened, download saved), schema version, app version/code and environment. Events contain no explicit user/account/tenant ID, page URL/content, notification content, file name/content or device fingerprint.
